@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {
     Box,
     Button,
@@ -15,22 +15,19 @@ import {
 import { FiMenu } from 'react-icons/fi'
 import {GrClose} from "react-icons/gr";
 
+import { navItems } from "../lib/data.js";
+
 export default function Nav(){
+    const navigate = useNavigate();
     const isDesktop = useBreakpointValue({
         base: false,
         lg: true,
     })
 
     const [isOpen, setIsOpen] = useState(false)
-
-    const navItems = [
-        {name: 'Home' , link: '/'},
-        {name: 'About' , link: '/about'},
-        {name: 'Menu' , link: '/menu'},
-        {name: 'Reservations' , link: '/reservations'},
-        {name: 'Order Online' , link: '/order_online'},
-        {name: 'Login' , link: '/login'}
-    ];
+    const handleHome = () => {
+        navigate('/');
+    }
 
     return (
         <>
@@ -51,7 +48,7 @@ export default function Nav(){
                                 lg: '5',
                             }}
                         >
-                            <Image src='./images/Logo.svg'/>
+                            <Image src='./images/Logo.svg' cursor='pointer' onClick={handleHome}/>
                             <HStack spacing="10" justify="space-between">
                                 {isDesktop ? (
                                     <Flex justify="space-between" flex="1">
