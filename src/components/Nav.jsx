@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
     Box,
     Button,
@@ -11,13 +13,15 @@ import {
 } from '@chakra-ui/react'
 
 import { FiMenu } from 'react-icons/fi'
-import { Link } from "react-router-dom";
+import {GrClose} from "react-icons/gr";
 
 export default function Nav(){
     const isDesktop = useBreakpointValue({
         base: false,
         lg: true,
     })
+
+    const [isOpen, setIsOpen] = useState(false)
 
     const navItems = [
         {name: 'Home' , link: '/'},
@@ -62,8 +66,9 @@ export default function Nav(){
                                 ) : (
                                      <IconButton
                                          variant="ghost"
-                                         icon={<FiMenu fontSize="1.25rem"/>}
+                                         icon={isOpen? <GrClose /> : <FiMenu fontSize="1.25rem"/>}
                                          aria-label="Open Menu"
+                                         onClick={() => setIsOpen(!isOpen)}
                                      />
                                  )}
                             </HStack>
@@ -71,7 +76,6 @@ export default function Nav(){
                     </Box>
                 </Box>
             </nav>
-
         </>
     )
 }

@@ -1,8 +1,8 @@
-import {Box, Grid, GridItem} from "@chakra-ui/react";
+    import {Box} from "@chakra-ui/react";
 
 import Header from "./components/Header";
-import Main from "./components/Main";
 import Footer from "./components/Footer";
+    import Router from "./Router.jsx";
 
 function App(){
     return (
@@ -15,7 +15,9 @@ function App(){
                 <Header />
             </Box>
             <Box flex={1}>
-                <Main/>
+                <main>
+                    <Router/>
+                </main>
             </Box>
             <Box height='13.8rem'>
                 <Footer/>

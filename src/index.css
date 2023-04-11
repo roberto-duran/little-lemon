@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
 :root {
   --main: #495e57;
   --secondary: #f4ce14;
   --secondary-hover: #e5c113;
+}
+
+body{
+  font-family: 'Karla', sans-serif !important;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #495e57;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 #hero {
