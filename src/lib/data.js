@@ -28,3 +28,54 @@ export const specialItems = [
         description: 'A lemon dessert with a lemon glaze, Sugar glaze, lemon cake and a lemon slice.'
     }
 ];
+
+export const testimonials = [
+    {
+        id:1,
+        name: 'John Doe',
+        rating: 5,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:2,
+        name: 'Jane Doe',
+        rating: 4,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:3,
+        name: 'John Smith',
+        rating: 3,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:4,
+        name: 'Jane Smith',
+        rating: 4,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:5,
+        name: 'Juan Doe',
+        rating: 5,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:6,
+        name: 'Juana Doe',
+        rating: 4,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:7,
+        name: 'Tomasito Pollo',
+        rating: 5,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    },
+    {
+        id:8,
+        name: 'Tomasita Pollo',
+        rating: 5,
+        text: 'Lorem ipsum dolor sit amet am consectetur adipisicing elit. Quisquam, quod.'
+    }
+];

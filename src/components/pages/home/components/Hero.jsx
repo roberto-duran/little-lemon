@@ -1,5 +1,5 @@
 import {Container, Heading, Text, Box, Stack, Image, Hide} from "@chakra-ui/react";
-import LMButton from "../../../../shared_components/LMButton.jsx";
+import LMButton from "../../../shared_components/LMButton.jsx";
 
 export default function Hero(){
     return (

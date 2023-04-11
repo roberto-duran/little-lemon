@@ -1,6 +1,6 @@
 import {Container, Grid, GridItem, HStack, Text} from "@chakra-ui/react";
-import LMButton from "../../../../shared_components/LMButton.jsx";
-import LmCard from "../../../../shared_components/LMCard.jsx";
+import LMButton from "../../../shared_components/LMButton.jsx";
+import LmCard from "../../../shared_components/LMCard.jsx";
 import { specialItems } from "../../../../lib/data.js";
 
 

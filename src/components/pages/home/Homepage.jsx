@@ -1,6 +1,8 @@
 import Hero from "./components/Hero.jsx";
 import {Box} from "@chakra-ui/react";
 import Specials from "./components/Specials.jsx";
+import Testimonials from "./components/Testimonials.jsx";
+import About from "./components/About.jsx";
 
 export default function Homepage(){
     return (
@@ -10,6 +12,12 @@ export default function Homepage(){
             </section>
             <section id="specials">
                 <Specials />
+            </section>
+            <section id="testimonials">
+                <Testimonials />
+            </section>
+            <section id="about">
+                <About />
             </section>
         </Box>
     );

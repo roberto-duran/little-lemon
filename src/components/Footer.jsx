@@ -26,7 +26,7 @@ export default function Footer(){
                         </Box>
                     </Stack>
                     <Stack spacing="4" minW="36" flex="1">
-                        <Text fontSize="sm" fontWeight="semibold" color="subtle">
+                        <Text fontSize="xl" fontWeight="semibold">
                             Doormat Navigation
                         </Text>
                         <Stack spacing="3" shouldWrapChildren>
@@ -38,7 +38,7 @@ export default function Footer(){
                         </Stack>
                     </Stack>
                     <Stack spacing="4" minW="36" flex="1">
-                        <Text fontSize="sm" fontWeight="semibold" color="subtle">
+                        <Text fontSize="xl" fontWeight="semibold">
                             Contact
                         </Text>
                         <Stack spacing="3" shouldWrapChildren>
@@ -48,7 +48,7 @@ export default function Footer(){
                         </Stack>
                     </Stack>
                     <Stack spacing="4">
-                        <Text fontSize="sm" fontWeight="semibold" color="subtle">
+                        <Text fontSize="xl" fontWeight="semibold">
                             Stay up to date
                         </Text>
                         <Stack spacing="3" shouldWrapChildren>
