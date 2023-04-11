@@ -11,6 +11,10 @@ export default function ReservationForm({availableTimes, updateTimes}){
     const [openModal, setOpenModal] = useState(false);
     const [data, setData] = useState({});
 
+    const handleUpdateTimes = (date) => {
+        updateTimes( new Date(date));
+    }
+
     const formik = useFormik({
         initialValues: {
             reservationName: "",
@@ -25,9 +29,10 @@ export default function ReservationForm({availableTimes, updateTimes}){
             setIsLoading(true);
             setTimeout(() => {
                 setData(values);
+                handleUpdateTimes(values.date);
                 setIsLoading(false);
                 setOpenModal(true);
-            }, 1000);
+            }, 500);
         },
         validationSchema: Yup.object().shape({
             reservationName: Yup.string().required("Required"),
@@ -42,7 +47,7 @@ export default function ReservationForm({availableTimes, updateTimes}){
     return (
         <>
             <VStack p={32} display='flex' justifyContent="center">
-                <Heading as="h1" id="contactme-section">
+                <Heading as="h1" id="heading">
                     Reservation
                 </Heading>
                 <Box p={6} rounded="md" w="100%">
