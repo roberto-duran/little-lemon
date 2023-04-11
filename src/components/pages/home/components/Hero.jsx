@@ -3,7 +3,7 @@ import LMButton from "../../../../shared_components/LMButton.jsx";
 
 export default function Hero(){
     return (
-        <Container maxW="container.lg" py={5} display='flex'
+        <Container maxW="container.xl" py={5} display='flex'
                    justifyContent='space-between'
                    flexDir={{
                        sm: 'column', md: 'row'

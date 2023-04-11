@@ -13,7 +13,7 @@ import {Link} from "react-router-dom";
 export default function Footer(){
     return (
         <footer>
-            <Container maxW="container.lg" as="footer" role="contentinfo">
+            <Container maxW="container.xl" as="footer" role="contentinfo">
                 <Stack
                     spacing="8"
                     direction={{base: "column", md: "row"}}

@@ -41,7 +41,7 @@ export default function Nav(){
                     <Box as="nav" bg="bg-surface" boxShadow="sm">
                         <Container
                             as={Flex}
-                            maxW="container.lg"
+                            maxW="container.xl"
                             justifyContent="space-between"
                             py={{
                                 base: '4',
