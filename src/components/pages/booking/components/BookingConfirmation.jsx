@@ -17,7 +17,7 @@ import {AiOutlineUser, AiOutlineUsergroupAdd,} from "react-icons/ai";
 import { GiPartyPopper } from "react-icons/gi";
 import { VscCommentUnresolved } from "react-icons/vsc";
 
-export default function ReservationConfirmation({isOpen, data, closeModal}){
+export default function BookingConfirmation({isOpen, data, closeModal}){
     const { onClose } = useDisclosure()
     const handleClose = () => {
         closeModal();

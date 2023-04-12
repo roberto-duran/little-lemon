@@ -1,10 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import {render, screen, fireEvent, getByTestId, waitFor } from "@testing-library/react";
 import '@testing-library/jest-dom';
-import ReservationForm from "../components/pages/reservation/components/ReservationForm.jsx";
+import BookingForm from "../components/pages/booking/components/BookingForm.jsx";
 import { BrowserRouter} from "react-router-dom";
 
-
-describe("Reservation Form", () => {
+describe("Booking Form Heading", () => {
     const availableTimes = [
         "17:00",
         "17:30",
@@ -18,10 +17,38 @@ describe("Reservation Form", () => {
     test('Renders the BookingForm heading', () => {
         render(
             <BrowserRouter>
-                <ReservationForm availableTimes={availableTimes} />
+                <BookingForm availableTimes={availableTimes} />
             </BrowserRouter>);
         const headingElement = screen.getByText("Reservation");
         expect(headingElement).toBeInTheDocument();
-    })
+    });
+
+    test('should show validation on click on submit', async () => {
+        render(
+            <BrowserRouter>
+                <BookingForm availableTimes={availableTimes} />
+            </BrowserRouter>);
+        const button = screen.getByText("Make Reservation");
+        fireEvent.click(button);
+
+        await waitFor(() => {
+            const error = screen.getByTestId("nameError")
+            expect(error).toHaveTextContent("Required");
+        });
+    });
+
+    test('should submit form', async () => {
+        render(
+            <BrowserRouter>
+                <BookingForm availableTimes={availableTimes} />
+            </BrowserRouter>);
+        const button = screen.getByText("Make Reservation");
+        fireEvent.click(button);
+
+        await waitFor(() => {
+            const error = screen.getByTestId("nameError")
+            expect(error).toHaveTextContent("Required");
+        });
+    });
 });
 

@@ -2,10 +2,10 @@ import {Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, Input, S
 import {useFormik} from "formik";
 import * as Yup from 'yup';
 import {useState} from "react";
-import ReservationConfirmation from "./ReservationConfirmation.jsx";
+import BookingConfirmation from "./BookingConfirmation.jsx";
 import { useNavigate } from "react-router-dom";
 
-export default function ReservationForm({availableTimes, updateTimes}){
+export default function BookingForm({availableTimes, updateTimes}){
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const [openModal, setOpenModal] = useState(false);
@@ -60,7 +60,9 @@ export default function ReservationForm({availableTimes, updateTimes}){
                                     name="reservationName"
                                     {...formik.getFieldProps('reservationName')}
                                 />
-                                <FormErrorMessage>{formik.errors.reservationName}</FormErrorMessage>
+                                <FormErrorMessage>
+                                    <FormLabel data-testid="nameError">{formik.errors.reservationName}</FormLabel>
+                                </FormErrorMessage>
                             </FormControl>
 
                             <FormControl isInvalid={formik.touched.email && formik.errors.email}>
@@ -136,16 +138,17 @@ export default function ReservationForm({availableTimes, updateTimes}){
                                     bgColor="secondary.100"
                                     isLoading={isLoading}
                                     loadingText='Submitting'
-                                    width="full">
+                                    width="full"
+                            >
                                 Make Reservation
                             </Button>
                         </VStack>
                     </form>
                 </Box>
             </VStack>
-            {openModal && <ReservationConfirmation isOpen={openModal}
-                                                   data={data}
-                                                   closeModal={() => {
+            {openModal && <BookingConfirmation isOpen={openModal}
+                                               data={data}
+                                               closeModal={() => {
                                                        setOpenModal(false);
                                                        formik.resetForm();
                                                        navigate("/");

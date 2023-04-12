@@ -1,8 +1,8 @@
 import { fetchAPI } from "../../../lib/bookingApi.js";
 import { useReducer } from "react";
-import ReservationForm from "./components/ReservationForm.jsx";
+import BookingForm from "./components/BookingForm.jsx";
 
-export default function Reservation(){
+export default function BookingPage(){
     const updateTimes = (date) => {
         return fetchAPI(date);
     }
@@ -13,7 +13,7 @@ export default function Reservation(){
     return (
         <>
             {/*<Heading />*/}
-            <ReservationForm availableTimes={availableTimes} updateTimes={dispatch} />
+            <BookingForm availableTimes={availableTimes} updateTimes={dispatch} />
         </>
     );
 };

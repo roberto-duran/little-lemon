@@ -1,4 +1,4 @@
-import {Box, Container, Image, Text} from "@chakra-ui/react";
+import {Box, Container, Hide, Image, Text} from "@chakra-ui/react";
 
 
 export default function About(){
@@ -15,22 +15,24 @@ export default function About(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </Text>
             </Box>
-            <Box display='flex'
-                 justifyContent='felex-start'
-                 alignItems='center'
-                 width='100%'
-                 position='relative'
-                 minH='20rem'
-            >
-                <Image height='15rem' width='20rem' src='./images/owners.jpg' alt='Owners' />
-                <Image height='15rem' width='20rem'
-                       src='./images/restaurant.jpg'
-                       alt='Restauerant'
-                       position='absolute'
-                       bottom='0.5rem'
-                       left='8rem'
-                />
-            </Box>
+            <Hide below='md'>
+                <Box display='flex'
+                     justifyContent='felex-start'
+                     alignItems='center'
+                     width='100%'
+                     position='relative'
+                     minH='20rem'
+                >
+                    <Image height='15rem' width='20rem' src='./images/owners.jpg' alt='Owners' />
+                    <Image height='15rem' width='20rem'
+                           src='./images/restaurant.jpg'
+                           alt='Restauerant'
+                           position='absolute'
+                           bottom='0.5rem'
+                           left='8rem'
+                    />
+                </Box>
+            </Hide>
         </Container>
     );
 };
